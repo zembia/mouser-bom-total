@@ -1,0 +1,14 @@
+{
+  "name": "Mouser BOM Total",
+  "version": "1.0",
+  "description": "Adds a field to show the total const of the BOM",
+  "manifest_version": 2,
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.mouser.cl/bom/edit?bomId*","https://www.mouser.com/bom/edit?bomId*" ],
+      "run_at": "document_end",
+      "js": ["background.js"]
+    }
+  ]
+}
